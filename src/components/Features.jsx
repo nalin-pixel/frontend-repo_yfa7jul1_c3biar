@@ -1,47 +1,47 @@
 import { ShieldCheck, Users, FileText, Mic, ScreenShare, MessageSquare } from 'lucide-react';
 
-const features = [
-  {
-    icon: ShieldCheck,
-    title: 'Sicurezza avanzata',
-    desc: 'Crittografia end‑to‑end, 2FA, link a scadenza e ruoli granulari (host, co‑host, spettatore).',
-  },
-  {
-    icon: Users,
-    title: 'Fino a 500 partecipanti',
-    desc: 'Incontri stabili e fluidi con ottimizzazione dinamica di banda e qualità.',
-  },
-  {
-    icon: ScreenShare,
-    title: 'Condivisione schermo e lavagna',
-    desc: 'Strumenti di collaborazione in tempo reale con annotazioni e whiteboard.',
-  },
-  {
-    icon: MessageSquare,
-    title: 'Chat evoluta',
-    desc: 'Reazioni, emoji, allegati e moderazione smart con filtri antispam.',
-  },
-  {
-    icon: Mic,
-    title: 'Trascrizione e traduzione',
-    desc: 'IA integrata per trascrizioni accurate, riassunti e traduzione live.',
-  },
-  {
-    icon: FileText,
-    title: 'Registrazioni sicure',
-    desc: 'Archiviazione cifrata su cloud, con controlli di accesso e scadenza automatica.',
-  },
-];
+export default function Features({ t }) {
+  const features = [
+    {
+      icon: ShieldCheck,
+      title: t.featureSecurityTitle,
+      desc: t.featureSecurityDesc,
+    },
+    {
+      icon: Users,
+      title: t.featureParticipantsTitle,
+      desc: t.featureParticipantsDesc,
+    },
+    {
+      icon: ScreenShare,
+      title: t.featureShareTitle,
+      desc: t.featureShareDesc,
+    },
+    {
+      icon: MessageSquare,
+      title: t.featureChatTitle,
+      desc: t.featureChatDesc,
+    },
+    {
+      icon: Mic,
+      title: t.featureAITransTitle,
+      desc: t.featureAITransDesc,
+    },
+    {
+      icon: FileText,
+      title: t.featureRecordingTitle,
+      desc: t.featureRecordingDesc,
+    },
+  ];
 
-export default function Features() {
   return (
     <section id="features" className="relative bg-white py-20 dark:bg-gray-950">
       <div className="mx-auto max-w-6xl px-6">
         <h2 className="text-center text-3xl font-semibold tracking-tight text-gray-900 dark:text-white sm:text-4xl">
-          Tutto ciò che serve per riunioni professionali
+          {t.featuresTitle}
         </h2>
         <p className="mx-auto mt-3 max-w-2xl text-center text-gray-600 dark:text-gray-300">
-          FortiMeet unisce sicurezza enterprise e collaborazione fluida in un'interfaccia semplice.
+          {t.featuresSubtitle}
         </p>
         <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {features.map(({ icon: Icon, title, desc }) => (

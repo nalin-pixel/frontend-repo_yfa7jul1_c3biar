@@ -1,6 +1,6 @@
 import { Shield } from 'lucide-react';
 
-export default function Footer() {
+export default function Footer({ t }) {
   return (
     <footer className="border-t border-gray-200 bg-white py-10 dark:border-gray-800 dark:bg-gray-950">
       <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-6 px-6 sm:flex-row">
@@ -11,7 +11,7 @@ export default function Footer() {
           <span className="text-base font-semibold">FortiMeet</span>
         </div>
         <p className="text-center text-sm text-gray-600 dark:text-gray-400">
-          © {new Date().getFullYear()} FortiMeet — Riunioni blindate, collaborazione fluida.
+          © {new Date().getFullYear()} FortiMeet — {t.footerCopy}
         </p>
       </div>
     </footer>
